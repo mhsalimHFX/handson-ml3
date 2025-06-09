@@ -3,12 +3,12 @@
 import os
 
 def remove_empty_directories(initial_dir,
-    allow_initial_delete=False, ignore_nonexistant_initial=False,
+    allow_initial_delete=False, ignore_nonexistent_initial=False,
     dry_run=False, quiet=False):
 
     FORBIDDEN_SUBDIRS = set([".git"])
 
-    if not os.path.isdir(initial_dir) and not ignore_nonexistant_initial:
+    if not os.path.isdir(initial_dir) and not ignore_nonexistent_initial:
         raise RuntimeError("Initial directory '{}' not found!".format(initial_dir))
 
     message = "removed"

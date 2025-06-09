@@ -13,5 +13,11 @@ shift
 WORKING_COPY=$DIRNAME/$BASENAME.ipynb
 CHECKPOINT_COPY=$DIRNAME/.ipynb_checkpoints/$BASENAME-checkpoint.ipynb
 
+# verify checkpoint file exists before calling nbdiff
+if [ ! -f "$CHECKPOINT_COPY" ]; then
+    echo "checkpoint not found: $CHECKPOINT_COPY" >&2
+    exit 1
+fi
+
 echo "----- Analysing how to change $CHECKPOINT_COPY into $WORKING_COPY -----"
 nbdiff "$CHECKPOINT_COPY" "$WORKING_COPY" --ignore-details "$@"

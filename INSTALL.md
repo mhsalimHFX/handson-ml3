@@ -22,7 +22,7 @@ Once Anaconda (or Miniconda) is installed, run the following command to update t
 
     $ conda update -n base -c defaults conda
 
-> **Note**: if you don't like Anaconda for some reason, then you can install Python 3 and use pip to install the required libraries manually (this is not recommended, unless you really know what you are doing). I recommend using Python 3.7, since some libs don't support Python 3.8 or 3.9 yet.
+> **Note**: if you don't like Anaconda for some reason, then you can install Python 3 and use pip to install the required libraries manually (this is not recommended, unless you really know what you are doing). I recommend Python 3.10 (which is the version you will get if you follow the instructions above). Any version ≥3.7 should work as well.
 
 
 ## Install the GPU Driver and Libraries
